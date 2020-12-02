@@ -1,7 +1,7 @@
 # fastExpm.m 
 
 This function efficiently implements matrix exponential matrix for sparse and full matrices. 
-This code is based on scaling, taylor series and scaling.
+This code is based on scaling, taylor series and scaling to preserves the matrix sparsity and compute expm(H) faster that Matlab's expm.m function.
 Works for both CPU and GPU (with appropriate toolbox). 
 Use: 
 - P = fastExpm(H) --> default settings
