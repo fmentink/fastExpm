@@ -3,13 +3,14 @@
 This function efficiently implements matrix exponential matrix for sparse and full matrices. 
 This code is based on scaling, taylor series and scaling.
 Works for both CPU and GPU (with appropriate toolbox). 
-Use: P = fastExpm(H) --> default settings
-     P = fastExpm(H,convergenceCriteria)
-     P = fastExpm(H,convergenceCriteria, nonZeroTol)
+Use: 
+- P = fastExpm(H) --> default settings
+- P = fastExpm(H,convergenceCriteria)
+- P = fastExpm(H,convergenceCriteria, nonZeroTol)
 
 Two criteria are used to speed the computation and preserve the sparsity.
-[1] convergenceCriteria determine the threshold for the Taylor series (default 1e-6)
-[2] nonZeroTol strips elements smaller than nonZeroTol at each computation step to preserve sparsity, default is 1e-14.
+- [1] convergenceCriteria determine the threshold for the Taylor series (default 1e-6)
+- [2] nonZeroTol strips elements smaller than nonZeroTol at each computation step to preserve sparsity, default is 1e-14.
 The code automatically switches from sparse to full if sparsity is below 15 % to maintain speed.
 If H is a gpuArray, P will be computed on the GPU.
 
