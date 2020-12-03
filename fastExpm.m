@@ -20,13 +20,13 @@ function P = fastExpm(H,varargin)
 
 % input check: is the user specifying its own criteria?
 if nargin>1
-    convergenceCriteria=varargin(2); % user specified convergenceCriteria
+    convergenceCriteria=varargin{1}; % user specified convergenceCriteria
 else
     convergenceCriteria=1e-6;
 end
 
 if nargin>2
-    nonZeroTol=varargin(2); % user specified nonZeroTol
+    nonZeroTol=varargin{2}; % user specified nonZeroTol
 else
     nonZeroTol=1e-14;
 end
