@@ -9,7 +9,7 @@ function P = fastExpm(H,varargin)
 % Two criteria are used to speed the computation and preserve the sparsity.
 % [1] convergenceCriteria determine the threshold for the Taylor series (default 1e-6)
 % [2] nonZeroTol strips elements smaller than nonZeroTol at each computation step to preserve sparsity, default is 1e-14.
-% The code automatically switches from sparse to full if sparsity is below 15 % to maintain speed.
+% The code automatically switches from sparse to full if sparsity is below 25 % to maintain speed.
 % If H is a gpuArray, P will be computed on the GPU.
 %
 % This code has been originally developed by Ilya Kuprov (http://spindynamics.org/) and has been adapted by F. Mentink-Vigier (fmentink@magnet.fsu.edu)
