@@ -38,7 +38,6 @@ H=H*scaling_factor^-1;
 H=nonZeroTol*round((1/nonZeroTol)*H);
 
 %% Run Taylor series procedure on the CPU/GPU
-P=0*H; % this ensures H and P are of the same type --> CPU/GPU
 P=speye(size(H)); nextTerm=P; n=1; 
 
 % Sparsity ans size check
