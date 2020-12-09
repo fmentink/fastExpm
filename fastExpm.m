@@ -1,6 +1,6 @@
 function P = fastExpm(H,varargin)
 % This function efficiently implements matrix exponential matrix for sparse and full matrices. 
-% This code is based on scaling, taylor series and scaling.
+% This code is based on scaling, taylor series and squaring.
 % Works for both CPU and GPU (with appropriate toolbox). 
 % Use: P = fastExpm(H) %with default settings
 %      P = fastExpm(H,convergenceCriteria)
